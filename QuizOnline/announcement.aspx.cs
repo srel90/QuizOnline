@@ -45,7 +45,7 @@ namespace QuizOnline
         {
             try
             {
-                System.IO.File.WriteAllText(@AppDomain.CurrentDomain.BaseDirectory + "announcement.html", Request.Form["txtannouncement"],System.Text.Encoding.UTF8);
+                System.IO.File.WriteAllText(@AppDomain.CurrentDomain.BaseDirectory + "announcement.html", HttpUtility.HtmlDecode(Request.Form["txtannouncement"]),System.Text.Encoding.UTF8);
                 Response.Write("true");
             }
             catch
