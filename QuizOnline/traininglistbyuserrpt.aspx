@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="userlist.aspx.cs" Inherits="QuizOnline.userlist" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="traininglistbyuserrpt.aspx.cs" Inherits="QuizOnline.traininglistbyuserrpt" %>
 <%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
 
 <!DOCTYPE html>

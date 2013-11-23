@@ -78,7 +78,7 @@
                                         <ul class="list-news">
                                     </HeaderTemplate>
                                     <ItemTemplate>
-                                        <li><a href='doquiz.aspx?quizListID=<%# Eval("quizListID")%>' title="header=[<%# Eval("description")%>] body=[&nbsp;] fade=[on]"><%# Eval("title")%> [<%# DateTime.Parse(Eval("valueDate").ToString()).ToString("yyyy-MM-dd")%>]</a></li>
+                                        <li><a href='doquiz.aspx?quizListID=<%# Eval("quizListID")%>' title="header=[<%# HttpUtility.HtmlDecode(Eval("description").ToString())%>] body=[&nbsp;] fade=[on]"><%# Eval("title")%> [<%# DateTime.Parse(Eval("valueDate").ToString()).ToString("yyyy-MM-dd")%>]</a></li>
                                     </ItemTemplate>
                                     <FooterTemplate>
                                         </ul>

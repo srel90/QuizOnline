@@ -16,10 +16,10 @@
         <li id="announcement" runat="server"><a href="announcement.aspx">Announcement</a> </li>
         <li id="report" runat="server"><a href="#">Report</a>
             <ul>
-                <li><a href="userlist.aspx">User List</a></li>
-                <li><a href="#">Quiz List</a></li>
-                <li><a href="#">Training List</a> </li>
-                <li><a href="#">Training List by user</a> </li>
+                <li><a href="userlist.aspx" target="_blank">User List</a></li>
+                <li><a href="allquizlistreport.aspx">Quiz List</a></li>
+                <li><a href="traininglist.aspx" target="_blank">Training List</a> </li>
+                <li><a href="traininglistbyuser.aspx">Training List by user</a> </li>
                 <li><a href="#">Training List by course</a> </li>
                 <li><a href="#">Summary</a> </li>
             </ul>

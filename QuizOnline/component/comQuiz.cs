@@ -243,6 +243,22 @@ namespace QuizOnline.component
                 throw new Exception(ex.Message);
             }
         }
+        public DataSet selectAllQuizByQuizListIDForReport(int quizListID)
+        {
+            strsql = "SELECT ql.quizListID,ql.userID,ql.title,ql.description,q.question,q.choice1,q.choice2,q.choice3,q.choice4,q.answer FROM quizList ql  LEFT OUTER JOIN quiz q ON ql.quizListID=q.quizListID WHERE ql.quizListID=@quizListID";
+            try
+            {
+
+                Dbcmd = db.GetSqlStringCommand(strsql);
+                db.AddInParameter(Dbcmd, "@quizListID", DbType.Int32, quizListID);
+                ds = db.ExecuteDataSet(Dbcmd);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public Boolean insertQuizList(clsQuizList clsQuizList)
         {
             strsql = "INSERT INTO quizList (";

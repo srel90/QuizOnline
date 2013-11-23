@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="allquizlist.aspx" />
+    <Content Include="allquizlistreport.aspx" />
     <Content Include="announcement.aspx" />
     <Content Include="App_Data\QuizOnline.mdf" />
     <Content Include="App_Data\QuizOnline_log.ldf">
@@ -2115,7 +2116,11 @@
     <Content Include="printcertificate.aspx" />
     <Content Include="printtraining.aspx" />
     <Content Include="quizlist.aspx" />
+    <Content Include="quizListrpt.aspx" />
     <Content Include="training.aspx" />
+    <Content Include="traininglist.aspx" />
+    <Content Include="traininglistbyuser.aspx" />
+    <Content Include="traininglistbyuserrpt.aspx" />
     <Content Include="userlist.aspx" />
     <Content Include="userrole.aspx" />
     <Content Include="users.aspx" />
@@ -2131,6 +2136,13 @@
     </Compile>
     <Compile Include="allquizlist.aspx.designer.cs">
       <DependentUpon>allquizlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="allquizlistreport.aspx.cs">
+      <DependentUpon>allquizlistreport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="allquizlistreport.aspx.designer.cs">
+      <DependentUpon>allquizlistreport.aspx</DependentUpon>
     </Compile>
     <Compile Include="announcement.aspx.cs">
       <DependentUpon>announcement.aspx</DependentUpon>
@@ -2244,6 +2256,13 @@
     <Compile Include="quizlist.aspx.designer.cs">
       <DependentUpon>quizlist.aspx</DependentUpon>
     </Compile>
+    <Compile Include="quizListrpt.aspx.cs">
+      <DependentUpon>quizListrpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="quizListrpt.aspx.designer.cs">
+      <DependentUpon>quizListrpt.aspx</DependentUpon>
+    </Compile>
     <Compile Include="QuizOnlineDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -2255,6 +2274,27 @@
     </Compile>
     <Compile Include="training.aspx.designer.cs">
       <DependentUpon>training.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="traininglist.aspx.cs">
+      <DependentUpon>traininglist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="traininglist.aspx.designer.cs">
+      <DependentUpon>traininglist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="traininglistbyuser.aspx.cs">
+      <DependentUpon>traininglistbyuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="traininglistbyuser.aspx.designer.cs">
+      <DependentUpon>traininglistbyuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="traininglistbyuserrpt.aspx.cs">
+      <DependentUpon>traininglistbyuserrpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="traininglistbyuserrpt.aspx.designer.cs">
+      <DependentUpon>traininglistbyuserrpt.aspx</DependentUpon>
     </Compile>
     <Compile Include="userlist.aspx.cs">
       <DependentUpon>userlist.aspx</DependentUpon>
@@ -2505,6 +2545,9 @@
     <Folder Include="js\ckfinder\_notes\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="report\quizlist.rdlc" />
+    <EmbeddedResource Include="report\traininglist.rdlc" />
+    <EmbeddedResource Include="report\traininglistbyuser.rdlc" />
     <EmbeddedResource Include="report\userlist.rdlc" />
   </ItemGroup>
   <PropertyGroup>
