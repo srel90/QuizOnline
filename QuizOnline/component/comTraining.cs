@@ -84,6 +84,22 @@ namespace QuizOnline.component
                 throw new Exception(ex.Message);
             }
         }
+        public DataSet selectTrainingListBycourseID(String courseID)
+        {
+            strsql = "SELECT course.courseName,trainingRegister.*,users.name,users.lastname,users.position,users.valueDate as startdate,users.email,users.mobile,users.photo,users.department,DATEDIFF(year, users.valuedate, getdate()) - (CASE WHEN (DATEADD(year, DATEDIFF(year, users.valuedate, getdate()), users.valuedate)) > getdate() THEN 1 ELSE 0 END) as Years, MONTH(getdate() - (DATEADD(year, DATEDIFF(year, users.valuedate, getdate()), users.valuedate))) - 1 as 'Month', DAY(getdate() - (DATEADD(year, DATEDIFF(year, users.valuedate, getdate()), users.valuedate))) - 1 as Days From trainingRegister trainingRegister LEFT OUTER JOIN users users ON trainingRegister.userID=users.userID LEFT OUTER JOIN course course ON  trainingRegister.courseID=course.courseID WHERE trainingRegister.courseID=@courseID";
+            try
+            {
+
+                Dbcmd = db.GetSqlStringCommand(strsql);
+                db.AddInParameter(Dbcmd, "@courseID", DbType.String, courseID);
+                ds = db.ExecuteDataSet(Dbcmd);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public DataSet getLastID()
         {
             strsql = "IF (SELECT TOP(1) trainingRegisterID+1  as lastID FROM trainingRegister ORDER BY trainingRegisterID DESC) IS NULL SELECT 1 as lastID ELSE SELECT TOP(1) trainingRegisterID+1  as lastID FROM trainingRegister ORDER BY trainingRegisterID DESC";

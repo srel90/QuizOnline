@@ -2119,6 +2119,8 @@
     <Content Include="quizListrpt.aspx" />
     <Content Include="training.aspx" />
     <Content Include="traininglist.aspx" />
+    <Content Include="traininglistbycourse.aspx" />
+    <Content Include="traininglistbycourserpt.aspx" />
     <Content Include="traininglistbyuser.aspx" />
     <Content Include="traininglistbyuserrpt.aspx" />
     <Content Include="userlist.aspx" />
@@ -2281,6 +2283,20 @@
     </Compile>
     <Compile Include="traininglist.aspx.designer.cs">
       <DependentUpon>traininglist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="traininglistbycourse.aspx.cs">
+      <DependentUpon>traininglistbycourse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="traininglistbycourse.aspx.designer.cs">
+      <DependentUpon>traininglistbycourse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="traininglistbycourserpt.aspx.cs">
+      <DependentUpon>traininglistbycourserpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="traininglistbycourserpt.aspx.designer.cs">
+      <DependentUpon>traininglistbycourserpt.aspx</DependentUpon>
     </Compile>
     <Compile Include="traininglistbyuser.aspx.cs">
       <DependentUpon>traininglistbyuser.aspx</DependentUpon>
@@ -2547,6 +2563,7 @@
   <ItemGroup>
     <EmbeddedResource Include="report\quizlist.rdlc" />
     <EmbeddedResource Include="report\traininglist.rdlc" />
+    <EmbeddedResource Include="report\traininglistbycourse.rdlc" />
     <EmbeddedResource Include="report\traininglistbyuser.rdlc" />
     <EmbeddedResource Include="report\userlist.rdlc" />
   </ItemGroup>

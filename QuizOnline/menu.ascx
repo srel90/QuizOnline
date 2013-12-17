@@ -20,7 +20,7 @@
                 <li><a href="allquizlistreport.aspx">Quiz List</a></li>
                 <li><a href="traininglist.aspx" target="_blank">Training List</a> </li>
                 <li><a href="traininglistbyuser.aspx">Training List by user</a> </li>
-                <li><a href="#">Training List by course</a> </li>
+                <li><a href="traininglistbycourse.aspx">Training List by course</a> </li>
                 <li><a href="#">Summary</a> </li>
             </ul>
         </li>
